@@ -2,6 +2,8 @@
 
 A policy-based mitigation example for CVE-2021-44228 on Red Hat Advanced Cluster Security for Kubernetes.
 The policy works on both build and deployment stages.
+More information about the vulnerability on the Red Hat Security Bulletin [RHSB-2021-009](https://access.redhat.com/security/vulnerabilities/RHSB-2021-009).
+
 
 ### How to use this example
 Create a new policy on RHACS to detect the images and components affected by the CVE and 
@@ -51,3 +53,6 @@ Looking at the RHACS console we can find detailed informations about the discove
 **IMPORTANT**: The policy only affects new deployments and builds. Pre-existing deployments are not eradicated by default and should be mitigated by 
 upgrading the underlying image or applying a proper mitigation like disabling Jndi lookup.
 
+### Bypassing the admission controller
+For emergency deployments, it is possible to bypass the admission controller by adding the `admission.stackrox.io/break-glass` annotation to the deployment YAML. It is recommended to use this features with caution.
+For more informations about the break-glass feature check out the following [article](https://access.redhat.com/articles/5897721) from Red Hat knowledge base.
