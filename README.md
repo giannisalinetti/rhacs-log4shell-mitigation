@@ -39,6 +39,11 @@ Events:
   Normal   ScalingReplicaSet     5s    deployment-controller  Scaled down replica set log4shell-f6d896fdd to 0
 ```
 
+From the OpenShift Developer Console, a deployment creation will trigger the following output, enriched with rationale and remediation messages:  
+
+![admission-controller-error](images/admission-controller-error.png).
+
+
 Looking at the RHACS console we can find detailed informations about the discovered vulnerability:
 
 ![CVE Details](images/cve-details.png)
