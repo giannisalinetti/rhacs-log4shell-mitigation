@@ -4,8 +4,8 @@
             "id": "22514e2d-08dc-4ffa-ab90-98794c4269dc",
             "name": "Log4Shell - CVE-2021-44228",
             "description": "Block build and deployment of images affected by CVE-2021-44228.",
-            "rationale": "",
-            "remediation": "",
+            "rationale": "CVE-2021-44228 is a critical vulnerability impacting log4j from v2.0 to v2.14.1 that allows RCE from a malicious LDAP contacted via Jndi lookup",
+            "remediation": "Disable Jndi lookup on the impacted applications by removing the JndiLookup class or passing the property log4j2.formatMsgNoLookups = true",
             "disabled": false,
             "categories": [
                 "Vulnerability Management"
